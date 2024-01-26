@@ -9,7 +9,7 @@ interface ButtonProps {
   iconClasses?: string;
   iconPosition?: 'left' | 'right';
   onClick?: MouseEventHandler<HTMLSpanElement>;
-  buttonStyle?: 'primary' | 'secondary';
+  buttonStyle?: 'primary' | 'secondary' | 'tertiary';
   type?: 'button' | 'submit' | 'reset';
 }
 
@@ -28,11 +28,31 @@ const Button: React.FC<ButtonProps> = ({
   const hasIcon = icon !== undefined && icon !== null;
 
   const primaryButtonClasses =
-    'text-neutral-0 bg-primary-800 hover:bg-primary-900 disabled:bg-gray-700 text-fontColor-dark-primary disabled:text-fontColor-disabled';
+    'text-white-0 bg-purple-60 border border-solid border-purple-60 hover:bg-purple-75 rounded-lg px-5 py-3 text-sm font-medium';
   const secondaryButtonClasses =
-    'text-primary-900 bg-neutral-0 hover:bg-primary-900 disabled:bg-gray-700 hover:text-neutral-0 disabled:text-fontColor-disabled';
+    'text-white-0 bg-gray-08 border border-solid border-gray-15 hover:bg-purple-75 rounded-lg px-5 py-3 text-sm font-medium';
+  const tertiaryButtonClasses =
+    'text-white-0 bg-gray-60 hover:bg-purple-75 rounded-full p-1 text-sm';
 
-  const buttonClasses = `inline-flex items-center justify-center rounded-lg gap-3 focus:outline-none transition duration-300 ease-in-out cursor-pointer ${buttonStyle === 'primary' ? primaryButtonClasses : secondaryButtonClasses} ${className ?? ''}`;
+  let buttonClasses = `inline-flex items-center justify-center gap-3 focus:outline-none transition duration-300 ease-in-out cursor-pointer disabled:bg-gray-700 disabled:text-fontColor-disabled`;
+
+  switch (buttonStyle) {
+    case 'primary':
+      buttonClasses += ` ${primaryButtonClasses}`;
+      break;
+    case 'secondary':
+      buttonClasses += ` ${secondaryButtonClasses}`;
+      break;
+    case 'tertiary':
+      buttonClasses += ` ${tertiaryButtonClasses}`;
+      break;
+    default:
+      buttonClasses += ` ${primaryButtonClasses}`;
+  }
+
+  if (className) {
+    buttonClasses += ` ${className}`;
+  }
 
   const content = (
     <>

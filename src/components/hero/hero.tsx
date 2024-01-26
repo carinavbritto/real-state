@@ -5,15 +5,15 @@ import bg from '../../../public/assets/images/build.svg';
 
 export default function Hero() {
   return (
-    <div className="w-full h-full flex flex-row-reverse md:gap-12 2xl:gap-20">
+    <div className="w-full max-h-full flex flex-row-reverse md:gap-12 2xl:gap-20 bg-gray-08">
       <BackgroundImage imageUrl={bg} className="w-1/2" />
 
-      <div className="w-1/2 flex-1 flex flex-col items-start md:gap-12 2xl:gap-14 md:py-24 2xl:py-36 md:pl-20 2xl:pl-40">
+      <div className="w-1/2 flex-1 flex flex-col items-start md:gap-12 2xl:gap-14 md:py-24 2xl:py-36 md:pl-20 2xl:pl-40 h-full">
         <div className="flex flex-col items-start justify-center gap-6">
-          <h1 className="sm:text-3xl md:text-4xl 2xl:text-5xl font-semibold pr-40 2xl:pr-5">
+          <h1 className="sm:text-3xl md:text-4xl 2xl:text-5xl font-semibold pr-40 2xl:pr-5 text-white-0">
             Discover Your Dream Property with Estatein
           </h1>
-          <h2 className="sm:text-base md:text-md 2xl:text-lg text-gray-600">
+          <h2 className="sm:text-base md:text-md 2xl:text-lg text-gray-60">
             Your journey to finding the perfect property begins here. Explore
             our listings to find the home that matches your dreams.
           </h2>

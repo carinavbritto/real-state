@@ -14,16 +14,16 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({
 }) => {
   return (
     <div
-      className={`relative flex flex-col h-full ${className}`}
+      className={`relative flex flex-col ${className}`}
       style={{ backgroundImage: `url(${imageUrl})` }}
     >
       <div className="absolute inset-0">
         <Image
           src={imageUrl}
           alt="Background Image"
-          priority={true}
-          className="object-cover"
-          height={920}
+          priority
+          className="object-cover max-h-full w-full"
+          height={622}
         />
       </div>
 

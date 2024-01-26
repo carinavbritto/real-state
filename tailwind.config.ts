@@ -35,6 +35,7 @@ const config: Config = {
         '60': '#999999'
       },
       white: {
+        '0': '#FFFFFF',
         '90': '#E4E4E7',
         '95': '#F1F1F3',
         '97': '#F7F7F8',
