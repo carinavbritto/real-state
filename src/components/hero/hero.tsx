@@ -2,7 +2,6 @@ import BackgroundImage from '../background-image/backgroundImage';
 import Button from '../button/button';
 import Card from '../card/card';
 import bg from '../../../public/assets/images/build.svg';
-// import Image from 'next/image';
 
 export default function Hero() {
   return (
