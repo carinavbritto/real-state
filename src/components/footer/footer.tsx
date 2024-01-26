@@ -26,9 +26,18 @@ export default function Footer() {
         <FooterNavigationBar />
       </div>
 
-      <div className="flex flex-row justify-between items-start pt-28">
-        <p>@2023 Estatein. All Rights Reserved.</p>
-        <Link href="#">Terms & Conditions</Link>
+      <div className="flex flex-row justify-between items-center pt-28">
+        <div className="flex items-center justify-center gap-3">
+          <p className="sm:text-sm md:text-sm 2xl:text-lg">
+            @2023 Estatein. All Rights Reserved.
+          </p>
+          <Link
+            href="#"
+            className="sm:text-sm md:text-sm 2xl:text-lg underline text-white"
+          >
+            Terms & Condition
+          </Link>
+        </div>
         <SocialButtons />
       </div>
     </footer>
