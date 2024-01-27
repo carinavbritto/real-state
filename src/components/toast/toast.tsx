@@ -29,8 +29,9 @@ export default function Toast() {
 
           <Button
             onClick={handleClose}
-            icon={<IoCloseOutline className="text-white-0 text-sm" />}
-            buttonStyle="tertiary"
+            icon={<IoCloseOutline className="text-white-0 text-md p-1 " />}
+            buttonStyle="rounded"
+            className="bg-gray-60"
           />
         </div>
       )}

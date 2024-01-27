@@ -8,30 +8,34 @@ export default function SocialButtons() {
       <ul className="flex items-center justify-center gap-3">
         <li>
           <Button
-            href="#"
+            href="https://www.facebook.com/"
             icon={<FaFacebookF className="text-white" />}
-            className="text-white focus:outline-none rounded-full bg-gray-40 hover:bg-gray-15 border-none py-1 px-1"
+            className="p-2 bg-gray-08"
+            buttonStyle="rounded"
           />
         </li>
         <li>
           <Button
-            href="#"
+            href="https://www.instagram.com/"
             icon={<FaLinkedinIn className="text-white" />}
-            className="text-white focus:outline-none rounded-full bg-gray-40 hover:bg-gray-15 border-none py-1 px-1"
+            className="p-2 bg-gray-08"
+            buttonStyle="rounded"
           />
         </li>
         <li>
           <Button
-            href="#"
+            href="https://www.x.com/"
             icon={<RiTwitterXFill className="text-white" />}
-            className="text-white focus:outline-none rounded-full bg-gray-40 hover:bg-gray-15 border-none py-1 px-1"
+            className="p-2 bg-gray-08"
+            buttonStyle="rounded"
           />
         </li>
         <li>
           <Button
-            href="#"
+            href="https://www.youtube.com/"
             icon={<FaYoutube className="text-white" />}
-            className="text-white focus:outline-none rounded-full bg-gray-40 hover:bg-gray-15 border-none py-1 px-1"
+            className="p-2 bg-gray-08"
+            buttonStyle="rounded"
           />
         </li>
       </ul>

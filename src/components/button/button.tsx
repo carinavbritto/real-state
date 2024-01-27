@@ -9,7 +9,7 @@ interface ButtonProps {
   iconClasses?: string;
   iconPosition?: 'left' | 'right';
   onClick?: MouseEventHandler<HTMLSpanElement>;
-  buttonStyle?: 'primary' | 'secondary' | 'tertiary';
+  buttonStyle?: 'primary' | 'secondary' | 'rounded';
   type?: 'button' | 'submit' | 'reset';
 }
 
@@ -31,8 +31,7 @@ const Button: React.FC<ButtonProps> = ({
     'text-white-0 bg-purple-60 border border-solid border-purple-60 hover:bg-purple-75 rounded-lg px-5 py-3 text-sm font-medium';
   const secondaryButtonClasses =
     'text-white-0 bg-gray-08 border border-solid border-gray-15 hover:bg-purple-75 rounded-lg px-5 py-3 text-sm font-medium';
-  const tertiaryButtonClasses =
-    'text-white-0 bg-gray-60 hover:bg-purple-75 rounded-full p-1 text-sm';
+  const roundedButtonClasses = 'text-white-0 rounded-full text-sm';
 
   let buttonClasses = `inline-flex items-center justify-center gap-3 focus:outline-none transition duration-300 ease-in-out cursor-pointer disabled:bg-gray-700 disabled:text-fontColor-disabled`;
 
@@ -43,8 +42,8 @@ const Button: React.FC<ButtonProps> = ({
     case 'secondary':
       buttonClasses += ` ${secondaryButtonClasses}`;
       break;
-    case 'tertiary':
-      buttonClasses += ` ${tertiaryButtonClasses}`;
+    case 'rounded':
+      buttonClasses += ` ${roundedButtonClasses}`;
       break;
     default:
       buttonClasses += ` ${primaryButtonClasses}`;
@@ -69,6 +68,7 @@ const Button: React.FC<ButtonProps> = ({
         href={href}
         className={`${buttonClasses} ${iconPosition === 'right' ? 'flex-row-reverse' : ''}`}
         onClick={onClick}
+        target='blank'
       >
         {content}
       </Link>

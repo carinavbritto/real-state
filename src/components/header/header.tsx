@@ -5,8 +5,8 @@ import Button from '../button/button';
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between py-5 md:px-20 2xl:px-40 bg-gray-10">
-      <Image src={logo} width={160} height={48} alt="Estatein Logo" />
+    <header className="flex items-center justify-between py-4 md:px-20 2xl:px-40 bg-gray-10">
+      <Image src={logo} width={114} height={34} alt="Estatein Logo" />
 
       <NavigationBar />
 

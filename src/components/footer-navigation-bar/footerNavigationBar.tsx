@@ -1,26 +1,29 @@
 import Link from 'next/link';
 
-export default function FooterNavigationBar() {
+interface FooterNavigationBarProps {
+  title?: string;
+  otherLinks: { title: string; href: string; }[];
+}
+
+const FooterNavigationBar: React.FC<FooterNavigationBarProps> = ({
+  title,
+  otherLinks
+}) => {
   return (
-    <nav className="flex flex-col items-start justify-between gap-7">
-      <h6>Home</h6>
-      <ul className="flex flex-col items-start justify-between gap-5">
-        <li>
-          <Link href="/">Hero Section</Link>
-        </li>
-        <li>
-          <Link href="/">Features</Link>
-        </li>
-        <li>
-          <Link href="/">Properties</Link>
-        </li>
-        <li>
-          <Link href="/">Testimonials</Link>
-        </li>
-        <li>
-          <Link href="/">FAQ’s</Link>
-        </li>
+    <nav className="flex flex-col items-start justify-between gap-6">
+      <h6 className="text-gray-60 text-lg">{title}</h6>
+
+      <ul className="flex flex-col items-start justify-between gap-5 text-white-0">
+        {otherLinks.map((link, index) => (
+          <li key={index}>
+            <Link href={link.href} passHref className="hover:text-purple-60">
+              {link.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
-}
+};
+
+export default FooterNavigationBar;
