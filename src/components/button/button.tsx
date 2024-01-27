@@ -68,7 +68,7 @@ const Button: React.FC<ButtonProps> = ({
         href={href}
         className={`${buttonClasses} ${iconPosition === 'right' ? 'flex-row-reverse' : ''}`}
         onClick={onClick}
-        target='blank'
+        target="blank"
       >
         {content}
       </Link>
